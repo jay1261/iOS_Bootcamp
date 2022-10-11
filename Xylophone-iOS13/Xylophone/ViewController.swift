@@ -20,13 +20,18 @@ class ViewController: UIViewController {
 
     
     @IBAction func kyePressed(_ sender: UIButton) {
+        let sound: String?
+        sound = sender.currentTitle
+        playSound(sound: sound)
         
-        playSound()
-        
+        sender.alpha = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            sender.alpha = 1
+        }
     }
     
-    func playSound() {
-           let url = Bundle.main.url(forResource: "C", withExtension: "wav")
+    func playSound(sound: String?) {
+           let url = Bundle.main.url(forResource: sound, withExtension: "wav")
            player = try! AVAudioPlayer(contentsOf: url!)
            player.play()
                    
@@ -34,4 +39,5 @@ class ViewController: UIViewController {
 
     
 }
+
 
