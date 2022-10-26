@@ -9,30 +9,38 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    
     var bmiValue : String?
+    var advise: String?
+    var color: UIColor?
     
     @IBOutlet weak var adviseLabel: UILabel!
     @IBOutlet weak var bmiLabel: UILabel!
-    
+    @IBOutlet weak var backgroundImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        bmiLabel.text = bmiValue
+        setView()
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setView(){
+        bmiLabel.text = bmiValue
+        adviseLabel.text = advise
+        backgroundImageView.backgroundColor = color
+        view.backgroundColor = color
     }
-    */
-
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

@@ -34,6 +34,7 @@ class CalculateViewController: UIViewController {
 //        print(String(format: "%.0f", sender.value))
         weightLabel.text = String(format: "%.0f", sender.value) + "Kg"
     }
+    
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
         let height = heightSlider.value
         let weight = weightSlider.value
@@ -46,6 +47,8 @@ class CalculateViewController: UIViewController {
         if segue.identifier == "goToResult"{
             let destinationVC = segue.destination as! ResultViewController
             destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.advise = calculatorBrain.getAdvise()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
 }
