@@ -40,3 +40,6 @@ struct OptionalStruct{
 let optionalStruct: OptionalStruct?
 optionalStruct = OptionalStruct()
 optionalStruct?.method() //?? print("asdf")
+
+
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8579A5D295D909000206CC5 /* Protocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8579A5C295D909000206CC5 /* Protocal.swift */; };
 		B8C04FE529014BC400C3014C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C04FE429014BC400C3014C /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B8579A5C295D909000206CC5 /* Protocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocal.swift; sourceTree = "<group>"; };
 		B8C04FE129014BC400C3014C /* OptionalsDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OptionalsDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C04FE429014BC400C3014C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				B8C04FE429014BC400C3014C /* main.swift */,
+				B8579A5C295D909000206CC5 /* Protocal.swift */,
 			);
 			path = OptionalsDemo;
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C04FE529014BC400C3014C /* main.swift in Sources */,
+				B8579A5D295D909000206CC5 /* Protocal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
