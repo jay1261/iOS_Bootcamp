@@ -8,6 +8,8 @@
 
 import Foundation
 
+// JSON 디코딩하기 위해 Decodable 프로토콜 사용해야함
+// 추가: Decodable, Encodable 을 합친게 Codable이다
 struct WeatherData: Decodable{
     let name: String
     let main: Main
