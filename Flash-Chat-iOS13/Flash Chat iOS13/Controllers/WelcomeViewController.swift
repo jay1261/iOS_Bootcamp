@@ -8,15 +8,19 @@
 
 import UIKit
 
+
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
-    let titleString = "⚡️FlashChat"
-    var index: Double = 0.0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+// ---------------- for loop animation ----------------
+        let titleString = "⚡️FlashChat"
+        var index: Double = 0.0
         titleLabel.text = ""
         for letter in titleString {
             Timer.scheduledTimer(withTimeInterval: 0.1 * index, repeats: false) { timer in
@@ -24,7 +28,10 @@ class WelcomeViewController: UIViewController {
             }
             index += 1
         }
-       
+//-----------------------------------------------------
+        
+        
+
     }
     
 
