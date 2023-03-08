@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
                 }
                 else{
                     // 회원가입 성공했을 떄 동작
-                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                    self.performSegue(withIdentifier: K.registerSegue , sender: self)
                 }
             }
         }

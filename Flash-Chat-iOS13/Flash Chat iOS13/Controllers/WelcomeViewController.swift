@@ -19,7 +19,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
 // ---------------- for loop animation ----------------
-        let titleString = "⚡️FlashChat"
+        let titleString = K.appName
         var index: Double = 0.0
         titleLabel.text = ""
         for letter in titleString {
