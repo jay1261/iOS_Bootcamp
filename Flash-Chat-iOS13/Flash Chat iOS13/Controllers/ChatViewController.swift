@@ -16,12 +16,13 @@ class ChatViewController: UIViewController {
     let messages : [Message] = [
         Message(sender: "1@2.com", body: "Hi"),
         Message(sender: "1@2.com", body: "Hello~?"),
-        Message(sender: "a@b.com", body: "Yeah")
+        Message(sender: "a@b.com", body: "Yeahasdfasdfasdfasdfas fxqwexfsadf fqwexf asdfxcvafe qfasdfxzcfgasdfqwe f")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
@@ -36,12 +37,12 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         if #available(iOS 14.0, *) {
             var content = cell.defaultContentConfiguration()
-            content.text = messages[indexPath.row].sender
-            content.secondaryText = messages[indexPath.row].body
-            cell.contentConfiguration = content
+            content.text = messages[indexPath.row].body
+//            content.secondaryText = messages[indexPath.row].body
+            cell.label.text = content.text
             return cell
         } else {
             // Fallback on earlier versions
